@@ -1,0 +1,638 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap');
+
+:root {
+  font-size: 16px;
+  --black: #3C4245;
+  --topping: #719192;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: white;
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  /* border-bottom: 1px solid aquamarine; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 30px;
+  transition: all .3s ease;
+}
+
+header nav {
+  height: 80px;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  list-style-type: none;
+  display: flex;
+}
+
+header .logo {
+  margin-left: 30px;
+  /* + padding kiri header 30px  |  nysesuaikan dg padding a*/
+  width: 100px;
+}
+
+header li a {
+  padding: 30px 40px;
+  /* + padding kanan header 30px */
+  color: white;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  transition: .3s ease;
+}
+
+header li a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.jumbotron-container {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+div.jumbotron {
+  max-width: 1300px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+div.jumbotron img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+div.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+.jumbotron-content {
+  color: white;
+  max-width: 50%;
+  margin: auto;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.jumbotron-content h1 {
+  font-family: "Raleway";
+  font-size: 4.4vmax;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+}
+
+.jumbotron-content p {
+  font-size: 1.5vmax;
+  font-weight: 400;
+}
+
+.jumbotron-content a {
+  display: block;
+  text-decoration: none;
+  padding: 12px 22px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 3.5px;
+  color: white;
+  font-family: 'Raleway';
+  font-size: .9rem;
+  font-weight: 600;
+  letter-spacing: -.5px;
+  margin-top: 10px;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.jumbotron-content a:hover {
+  background-color: white;
+  color: var(--black);
+}
+
+.container {
+  max-width: 1200px;
+  padding-inline: 30px;
+  width: 100%;
+}
+
+svg {
+  color: var(--topping);
+}
+
+.banner {
+  width: 100%;
+  padding-block: 50px;
+  display: grid;
+  column-gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid rgba(113, 145, 146, .35);
+}
+
+.banner-card {
+  display: flex;
+  gap: 5px;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--topping);
+}
+
+.banner-card i {
+  font-size: 4.5rem;
+  margin-bottom: 10px;
+}
+
+.banner-card h4 {
+  /* font-family: "Raleway"; */
+  font-family: "Lato";
+  font-size: 1.10rem;
+  font-weight: 600;
+}
+
+.banner-card p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+#mainContent {
+  max-width: 1200px;
+  width: 100%;
+  padding-block: 50px;
+  display: flex;
+  gap: 80px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--black);
+  gap: 20px;
+  text-align: center;
+}
+
+.heading h2 {
+  font-family: "Raleway";
+  font-size: 2.5rem;
+}
+
+.heading p {
+  font-size: 1.10rem;
+}
+
+.heading h2 span {
+  color: var(--topping);
+}
+
+.search-area {
+  margin-top: 20px;
+  display: flex;
+  background-color: pink;
+  align-items: center;
+}
+
+.search-bar {
+  width: 250px;
+  height: 50px;
+  font-size: 1rem;
+  border: 3px solid var(--black);
+  border-radius: 3px;
+
+  position: relative;
+  z-index: 1;
+}
+
+.search-bar i {
+  background-color: white;
+  padding-inline: 5px;
+  font-size: 1.65rem;
+
+  position: absolute;
+  top: -12px;
+  left: 36px;
+
+  transition: .3s ease-out;
+}
+
+.search-bar input {
+  width: 100%;
+  height: 100%;
+  padding-left: 80px;
+  border: none;
+  outline: none;
+  background-color: white;
+  font-family: "Lato";
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--black);
+
+  transition: .3s ease-out;
+}
+
+.search-area button {
+  height: 50px;
+  padding: 16px 6px;
+  background-color: var(--black);
+  border: 3px solid var(--black);
+  border-radius: 2px;
+  font-size: .8rem;
+  color: white;
+  outline: none;
+  font-weight: bolder;
+
+  margin-left: -50px;
+  transition: .3s ease-in;
+  cursor: pointer;
+}
+
+.search-bar:hover i {
+  position: absolute;
+  top: -12px;
+  left: -15px;
+}
+
+.search-area:hover button {
+  margin-left: -3px;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px 30px;
+}
+
+.post {
+  min-height: 350px;
+  height: 100%;
+  /* height: 350px; */
+  font-family: "Raleway";
+  /* cursor: pointer; */
+  text-decoration: none;
+  color: inherit;
+  transition: .3s ease;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  align-items: start;
+}
+
+.post .post-image {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  /* height: fit-content; */
+  height: 200px;
+  overflow: hidden;
+}
+
+.post img {
+  width: 100%;
+  /* max-height: 250px; */
+  object-fit: cover;
+  object-position: center;
+  transition: .8s ease-in;
+}
+
+.post p {
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 3px;
+}
+
+.post h3 {
+  font-size: 1.85rem;
+  font-weight: 700;
+  margin-left: -2.5px;
+  padding-left: 0;
+}
+
+.post img:hover {
+  transform: scale(1.12);
+}
+
+.post:hover {
+  color: var(--topping);
+  color: #87bbbd;
+}
+
+footer {
+  width: 100%;
+  padding: 30px;
+  background-color: var(--black);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+
+footer ul {
+  list-style-type: none;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+footer a {
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+  display: block;
+  height: 44px;
+}
+
+footer p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.skip-button {
+  display: block;
+  padding: 10px 20px;
+  background-color: var(--topping);
+  color: white;
+  text-decoration: none;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  border-bottom-right-radius: 10px;
+
+  position: fixed;
+  z-index: 99;
+  top: -100%;
+  left: 0;
+  transition: .3s ease;
+}
+
+.skip-button:focus {
+  top: 0;
+}
+
+#stack-menu {
+  display: none;
+}
+
+h2.placeholder {
+  font-weight: bold;
+  color: var(--black);
+  text-align: center;
+}
+
+/* DETAIL PAGE */
+
+
+.pattern {
+  width: 100%;
+  height: 80px;
+  background-color: #f6f6f6;
+  /* background-image: url("../public/images/pattern/daun.webp"); */
+  filter: brightness(50%);
+}
+
+.container-detail {
+  max-width: 1200px;
+  padding-inline: 30px;
+  width: 100%;
+  /*
+  for detail page
+   */ 
+  margin-top: 40px;
+  background: rgb(217,217,217);
+  background: linear-gradient(90deg, rgba(217,217,217,1) 59%, rgba(246,246,246,1) 77%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.detail-image img {
+  max-width: 600px;
+  width: 100%;
+}
+
+.detail-text {
+  padding-inline-start: 40px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 30px;
+}
+
+.detail-text h1 {
+  font-size: calc(2 * 1em + 2px);
+  font-weight: 500;
+}
+
+.detail-text h4 {
+  font-family: 'Lato', sans-serif;
+  font-size: .7em;
+  font-weight: 300;
+  margin-top: -28px;
+}
+
+.detail-text  p{
+  line-height: 30px;
+}
+
+.detail-text span {
+  text-decoration: underline;
+}
+
+.detail-text div.menu-container {
+  margin-left: 20px;
+  margin-top: -12px;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  gap: 40px;
+}
+
+.detail-text ul {
+  list-style-type: circle;
+}
+
+.detail-text li {
+  margin-bottom: 10px;
+}
+/* 
+.detail-text button {
+  background-color: transparent;
+  border-radius: 2px;
+  border: 2px solid rgb(57, 57, 57);
+  font-family: 'Lato';
+  font-weight: 700;
+  padding: 12px 20px;
+  letter-spacing: 1.2px;
+  transition: .3s;
+}
+
+.detail-text button:hover {
+  background-color: rgb(54, 54, 54);
+  color: white;
+}
+
+.detail-text button:focus {
+  outline: 4px double var(--topping);
+} */
+
+
+.detail-text button {
+  border: none;
+  background-color: transparent;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.detail-text button img {
+  width: 32px;
+}
+
+/* TESTIMONI */
+
+.testimoni {
+  width: 100%;
+  margin-block-start: 80px;
+  margin-block-end: 5px;
+  min-height: 250px;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-position: center;
+  color: white;
+  font-family: "Raleway";
+  overflow: hidden;
+}
+
+.testimoni-overlay {
+  width: 100%;
+  min-height: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .65);
+  display: flex;
+  justify-content: space-around;
+}
+
+.testimoni-title h2{
+  margin-top: 40px;
+  font-size: 42px;
+  font-weight: 600;
+}
+
+.testimoni-title span {
+  display: block;
+  margin-top: 3.5px;
+  margin-left: 5px;
+  width: 50%; 
+  height: 4px;
+  background-color: white;
+}
+
+.testimoni-card {
+  max-width: 280px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.testimoni-card p {
+  text-align: center;
+}
+
+
+.testimoni-card span {
+  font-weight: 500;
+  /* font-family: "Lato"; */
+}
+
+.empty-sauce {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.empty-sauce img {
+  width: 200px;
+}
+
+.empty-sauce img + p {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.empty-sauce p {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.loader-container {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* background-color: rgba(241, 242, 243, .5); */
+  background-color: rgba(68, 68, 68, 0.8);
+  display: flex;
+}
+
+.loader-container img {
+  margin: auto;
+  width: 80px;
+}
+
