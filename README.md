@@ -15,3 +15,10 @@ Sebuah Web App Katalog Restoran + PWA yang menerapkan Automation Test dan bebera
   - Menggunakan teknik Code Splitting untuk memisahkan vendor code dari kode asli yang dituliskan.
 - Mempertahankan responsibilitas dan segi aksesibilitas
 
+## How to Run
+
+```
+npm install
+npm run dev
+```
+
